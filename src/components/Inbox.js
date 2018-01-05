@@ -3,7 +3,6 @@ import uuid from 'uuid';
 import $ from 'jquery';
 import Projects from '../components/Projects';
 import MailList from '../components/MailList.js';
-import '../stylesheets/App.css';
 import MailImage from '../assets/mail.svg'
 import '../stylesheets/mailList.css';
 import '../stylesheets/mailListHeader.css';
