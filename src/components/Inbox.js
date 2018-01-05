@@ -9,7 +9,7 @@ import '../stylesheets/mailList.css';
 import '../stylesheets/mailListHeader.css';
 import '../stylesheets/mailListItem.css';
 import '../stylesheets/mailBody.css';
- 
+import '../stylesheets/mediaQueries.css'; 
 
 
 export class Inbox extends React.Component {
@@ -71,16 +71,8 @@ export class Inbox extends React.Component {
  }
 
  componentDidMount(){
-  this.getMailList = setInterval(this.getMailList.bind(this),1000)
+  this.getMailList = setInterval(this.getMailList.bind(this),90000)
  }
-
-
-
-  handleAddProject(project){
-    let projects = this.state.projects;
-    projects.push(project);
-    this.setState({projects:projects});
-  }
 
   handleDeleteProject(id){
     let projects = this.state.projects;
@@ -97,19 +89,17 @@ export class Inbox extends React.Component {
  //  }
 
      render() {
-     	//probably here should go some function to make mails appear in interval of 90 seconds (90000 ms)
+      //probably here should go some function to make mails appear in interval of 90 seconds (90000 ms)
       return (
             <div>
               <ul> 
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail2"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail2"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail2"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
+                  <MailList MailList={this.state.MailList}/>
+                  <MailList MailList={this.state.MailList}/>
+                  <MailList MailList={this.state.MailList}/>
+                  <MailList MailList={this.state.MailList}/>
+                  <MailList MailList={this.state.MailList}/>
+                  <MailList MailList={this.state.MailList}/>
+                  <MailList MailList={this.state.MailList}/>
                 
               </ul>
               

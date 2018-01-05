@@ -11,7 +11,7 @@ class MailList extends Component {
     if(this.props.MailList) {
        MailItems = this.props.MailList.map(mail => {
         return (
-          <MailItem key={mail.title} mail={mail} />
+          <li className="mail1"><MailItem key={mail.title} mail={mail} /></li>
         );
       });
     }

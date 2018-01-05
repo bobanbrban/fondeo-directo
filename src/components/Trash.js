@@ -7,6 +7,7 @@ import '../stylesheets/mailList.css';
 import '../stylesheets/mailListHeader.css';
 import '../stylesheets/mailListItem.css';
 import '../stylesheets/mailBody.css';
+import '../stylesheets/mediaQueries.css'; 
 
 
 
@@ -51,10 +52,10 @@ class Trash extends React.Component {
         return (
             <div>
               <ul>    
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
+                  <MailList MailList={this.state.MailList}/>
+                  <MailList MailList={this.state.MailList}/>
+                  <MailList MailList={this.state.MailList}/>
+                  <MailList MailList={this.state.MailList}/>
                </ul>
                   
              

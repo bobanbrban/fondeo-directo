@@ -8,6 +8,7 @@ import '../stylesheets/mailListHeader.css';
 import '../stylesheets/mailListItem.css';
 import '../stylesheets/mailBody.css';
 import LoggingButton from '../App';
+import '../stylesheets/mediaQueries.css'; 
 
 
 class ProjectItem extends Component {
@@ -31,7 +32,7 @@ class ProjectItem extends Component {
              
          <div className="Project">
             <div className="mainTitleGroup">
-                <span className="titleMain"><strong>{this.props.project.title}</strong></span>
+                <span className="titleMain">{this.props.project.title}</span>
                 <span className="fromMain"><a href="mailto:mhallatt@agavelab.com?Subject=Fondeo-Directo-Test" target="_top" className="mailLink">{this.props.project.from}</a></span>
                 <span className="dateMain"> {this.props.project.date}</span> 
             </div>

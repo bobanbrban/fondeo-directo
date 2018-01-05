@@ -9,10 +9,10 @@ $border: #B5B5B5;
 
 
 
-.mailBody {
+.mailBodyList {
 	  
 	  text-align: left;
-	  font-size:14px;
+	  font-size:12px;
 	  color: $shortDescription;
 	  padding-left: 25px;
 	  text-align: justify;
@@ -54,6 +54,12 @@ $border: #B5B5B5;
 	
 }
 
+.senderName {
+	
+	font-size: 14px;
+	font-weight: bold;
+}
+
 .Circle {
 	
 	backround-color: $selectedBar ;
@@ -72,6 +78,7 @@ $border: #B5B5B5;
 	
 	margin-left: 10px;
 	padding-top: 8px;
+	font-size: 14px;
 	
 
 }
