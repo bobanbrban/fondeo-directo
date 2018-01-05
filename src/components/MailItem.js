@@ -8,9 +8,9 @@ class MailItem extends Component {
   render() {
     return (
        <div className="mailItems">
-             <span className="Sender"><FaUser className="User" />{this.props.mail.from}</span><span className="Date">{this.props.mail.date}</span><br/>
+             <span className="Sender"><FaUser className="User" /><span className="senderName">{this.props.mail.from}</span></span><span className="Date">{this.props.mail.date}</span><br/>
              <span className="Title"><FaCircle className="Circle" />{this.props.mail.title}</span><br/>
-             <span className="mailBody">{this.props.mail.body}</span><br/>
+             <span className="mailBodyList">{this.props.mail.body}</span><br/>
              <span className="Subject">{this.props.mail.subject}</span><br/>
              <span className="To">{this.props.mail.to}</span><br/>
              <span className="Tag">{this.props.mail.tag}</span><br/>

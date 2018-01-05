@@ -6,7 +6,7 @@ import '../stylesheets/mailList.css';
 import '../stylesheets/mailListHeader.css';
 import '../stylesheets/mailListItem.css';
 import '../stylesheets/mailBody.css';
-
+import '../stylesheets/mediaQueries.css'; 
 
 
 class Spam extends React.Component {
@@ -52,16 +52,11 @@ class Spam extends React.Component {
             <div>
               <ul>  
                  
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-                  <li className="mail1"><MailList MailList={this.state.MailList}/></li>
-               </ul>
-                  
+                <MailList MailList={this.state.MailList}/>
+                <MailList MailList={this.state.MailList}/>
+                <MailList MailList={this.state.MailList}/>
+                
+              </ul>    
              
               <section className="mailBodyRight">
 

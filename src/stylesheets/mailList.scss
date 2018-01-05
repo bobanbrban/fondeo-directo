@@ -8,22 +8,22 @@ $border: #B5B5B5;
 
 
 ul {
-	
-	margin: 0px;
-	padding: 0px;
-	width:330px;
-	height: 1080px;
-	float: left;
-	border-right: 2px solid $border;
-	list-style-type: none ;
-	overflow: scroll;
+  
+  margin: 0px;
+  padding: 0px;
+  width:330px;
+  height: 1080px;
+  float: left;
+  border-right: 2px solid $border;
+  list-style-type: none ;
+  overflow: scroll;
 
 }
 
 
 li {
 
-border-bottom: 1px solid $border;	
+border-bottom: 1px solid $border; 
 padding-top: 15px;
 
 }
