@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './stylesheets/App.css';
 import FaCircle from 'react-icons/lib/fa/circle';
 import './stylesheets/mailList.css';
 import './stylesheets/mailListHeader.css';
