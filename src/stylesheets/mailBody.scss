@@ -21,13 +21,19 @@ body {
 }
 
 
+.mailRightOnClick {
+	
+
+}
+
+
 .MailPic {
 
 	display: block;
 	padding-top: 15%;
 	margin-left: auto;
 	margin-right: auto;
-	opacity: .1;
+	opacity: .08;
 }
 
 
@@ -123,3 +129,7 @@ h5 {
 }
 
 
+.trash {
+	
+	display: none;
+}

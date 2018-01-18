@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import MailList from '../components/MailList.js';
 import MailImage from '../assets/mail.svg'
 import '../stylesheets/mailList.css';
@@ -8,6 +7,11 @@ import '../stylesheets/mailListItem.css';
 import '../stylesheets/mailBody.css';
 import '../stylesheets/mediaQueries.css'; 
 
+
+
+
+
+const API = 'https://raw.githubusercontent.com/bobanbrban/bobanetest/master/mail-dat.json';
 
 class Spam extends React.Component {
   
@@ -22,19 +26,12 @@ class Spam extends React.Component {
 
 
   getMailList(){
-    $.ajax({
-      url: 'https://raw.githubusercontent.com/bobanbrban/bobanetest/master/mail-dat.json',
-      dataType:'json',
-      cache: true,
-      success: function(data){
-        this.setState({MailList: data}, function(){
+     fetch(API)
+      .then(response => response.json())
+      .then(data => this.setState({MailList: data}, function(){
           console.log(this.state);
-        });
-      }.bind(this),
-      error: function(xhr, status, err){
-        console.log(err);
-      }
-    });
+        }).bind(this),
+      );
   }
 
  componentWillMount(){
@@ -47,16 +44,16 @@ class Spam extends React.Component {
 
 
 
+    
     render() {
+          if(this.state.MailList.isSpam === true) { 
         return (
             <div>
-              <ul>  
-                 
-                <MailList MailList={this.state.MailList}/>
-                <MailList MailList={this.state.MailList}/>
-                <MailList MailList={this.state.MailList}/>
-                
-              </ul>    
+              <ul>    
+                  <MailList MailList={this.state.MailList}/>
+                  
+               </ul>
+                  
              
               <section className="mailBodyRight">
 
@@ -65,9 +62,26 @@ class Spam extends React.Component {
     
              </section>
            </div> 
-        );
+        )}
+
+        else return  (
+            <div>
+              <ul>    
+                  
+                 
+                  
+               </ul>
+                  
+             
+              <section className="mailBodyRight">
+
+                 <img src={MailImage} className="MailPic" width="250px height=250px" alt="logo" />
+                
+    
+             </section>
+           </div> 
+        )} ;
     }
-}
 
 
 export default Spam

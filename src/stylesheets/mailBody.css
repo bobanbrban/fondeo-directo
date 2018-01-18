@@ -75,4 +75,5 @@ h5 {
 .mailLink {
   color: #4990E2; }
 
-/*# sourceMappingURL=mailBody.css.map */
+.trash {
+  display: none; }
