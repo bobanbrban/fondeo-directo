@@ -1,40 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import FaCircle from 'react-icons/lib/fa/circle';
-import './stylesheets/mailList.css';
-import './stylesheets/mailListHeader.css';
-import './stylesheets/mailListItem.css';
-import './stylesheets/mailBody.css';
-
-
-
-class LoggingButton extends React.Component {
- 
-    constructor(props) {
-    super(props);
-    this.state = {isReaded: true};
-
-    // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
-  }
- 
-  handleClick() {
-   this.setState(prevState => ({
-      isReaded: !prevState.isReaded
-  }));
-  }
-
-
-  render() {
-    // This syntax ensures `this` is bound within handleClick
-    return (
-      <Link to="#" ><FaCircle onClick={(e) => this.handleClick(e)} activeStyle={{ color: '#4990E2' }} className= "mainIconCircle"/></Link>
-      
-    );
-  }
-}
+import React from "react"
+import createBrowserHistory from 'history/createBrowserHistory';
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom'
+import Trash from './components/Trash'
+import Spam from './components/Spam'
+import Inbox from './components/Inbox'
+import { Provider } from 'react-redux';
+import { store } from './Store';
+import actionApp from './actions/actionApp';
 
 
 
 
- export default LoggingButton
+export const routerMain = (    
+        
+      <Provider store={store}>
+       <Router>
+          <div className="navHeader">
+       <Route path="/" component={actionApp} />
+       <Route exact path="/" component={Inbox} createBrowserHistory={createBrowserHistory}/>
+      <Route exact path="/Inbox" component={Inbox} createBrowserHistory={createBrowserHistory}/>
+      <Route exact path="/Trash" component={Trash} createBrowserHistory={createBrowserHistory}/>
+      <Route exact path="/Spam" component={Spam} createBrowserHistory={createBrowserHistory}/>
+     
+  
+    </div>
+  </Router>  
+ </Provider> 
+)
+
