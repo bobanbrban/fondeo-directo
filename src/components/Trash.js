@@ -11,7 +11,7 @@ const API = 'https://raw.githubusercontent.com/bobanbrban/bobanetest/master/mail
 
 
 class Trash extends React.Component {
-  
+
 
   constructor(){
     super();
@@ -24,7 +24,7 @@ class Trash extends React.Component {
       .then(response => response.json())
       .then(data => this.setState({MailList: data}, function(){
           console.log(this.state);
-        }).bind(this),
+        }),
       );
   }
 
@@ -39,43 +39,43 @@ class Trash extends React.Component {
 
 
 
-   
+
 
     render() {
-          if(this.state.MailList.isTrash === true) { 
+          if(document.getElementById === "mailRight") {
         return (
             <div>
-              <ul>    
+              <ul>
                   <MailList MailList={this.state.MailList}/>
-                  
+
                </ul>
-                  
-             
+
+
               <section className="mailBodyRight">
 
                  <img src={MailImage} className="MailPic" width="250px height=250px" alt="logo" />
-                
-    
+
+
              </section>
-           </div> 
+           </div>
         )}
 
         else return  (
             <div>
-              <ul>    
-                  
-                 
-                  
+              <ul>
+
+
+
                </ul>
-                  
-             
+
+
               <section className="mailBodyRight">
 
                  <img src={MailImage} className="MailPic" width="250px height=250px" alt="logo" />
-                
-    
+
+
              </section>
-           </div> 
+           </div>
         )} ;
     }
 

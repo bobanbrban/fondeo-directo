@@ -7,11 +7,11 @@ class MailList extends Component {
 constructor(){
     super();
     this.state = {
-      
- 
+
+
     }
   }
-    
+
 
 deleteMail() {
         this.props.onDelete();
@@ -20,11 +20,14 @@ deleteMail() {
 
 handleClick() {
 
-       document.getElementById("mailRight").className = "mailRightOnClick";
-        document.getElementById("rightHidden").style.display = "block"
+       document.getElementById("circleon").className = "mailRightOnClick";
+        document.getElementById("rightHidden").style.display = "block";
+  
+
 
   }
- 
+
+
   render() {
     let MailItems;
     if(this.props.MailList){
@@ -36,7 +39,7 @@ handleClick() {
       });
     }
     return (
-      <div className="mailList" >
+      <div className="mailList">
        {MailItems}
       </div>
     );

@@ -5,7 +5,7 @@ import '../stylesheets/mailList.css';
 import '../stylesheets/mailListHeader.css';
 import '../stylesheets/mailListItem.css';
 import '../stylesheets/mailBody.css';
-import '../stylesheets/mediaQueries.css'; 
+import '../stylesheets/mediaQueries.css';
 
 
 
@@ -14,7 +14,7 @@ import '../stylesheets/mediaQueries.css';
 const API = 'https://raw.githubusercontent.com/bobanbrban/bobanetest/master/mail-dat.json';
 
 class Spam extends React.Component {
-  
+
 
   constructor(){
     super();
@@ -30,7 +30,7 @@ class Spam extends React.Component {
       .then(response => response.json())
       .then(data => this.setState({MailList: data}, function(){
           console.log(this.state);
-        }).bind(this),
+        }),
       );
   }
 
@@ -44,42 +44,42 @@ class Spam extends React.Component {
 
 
 
-    
+
     render() {
-          if(this.state.MailList.isSpam === true) { 
+          if(this.state.MailList) {
         return (
             <div>
-              <ul>    
+              <ul>
                   <MailList MailList={this.state.MailList}/>
-                  
+
                </ul>
-                  
-             
+
+
               <section className="mailBodyRight">
 
                  <img src={MailImage} className="MailPic" width="250px height=250px" alt="logo" />
-                
-    
+
+
              </section>
-           </div> 
+           </div>
         )}
 
         else return  (
             <div>
-              <ul>    
-                  
-                 
-                  
+              <ul>
+
+
+
                </ul>
-                  
-             
+
+
               <section className="mailBodyRight">
 
                  <img src={MailImage} className="MailPic" width="250px height=250px" alt="logo" />
-                
-    
+
+
              </section>
-           </div> 
+           </div>
         )} ;
     }
 

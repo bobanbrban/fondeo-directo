@@ -5,7 +5,7 @@
 
         MailList
 
-     }	
+     }
 
 
 }
@@ -17,7 +17,7 @@
 
         MailItem
 
-     }	
+     }
 
 
 }
@@ -31,7 +31,20 @@
 
         MailItem
 
-     }	
+     }
+
+
+}
+
+
+export function getMail(MailItem) {
+    return {
+
+       type: 'GET_MAIL' ,
+
+       MailItem
+
+    }
 
 
 }
