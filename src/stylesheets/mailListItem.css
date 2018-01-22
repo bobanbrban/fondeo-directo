@@ -44,3 +44,9 @@
 
 .active {
   color: #4990E2; }
+
+.off {
+  display: none; }
+
+.mailRightOnClick {
+  visibility: hidden; }
